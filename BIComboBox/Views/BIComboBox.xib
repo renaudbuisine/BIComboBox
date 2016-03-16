@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BIComboBox">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_cbb_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-ue-0cY" userLabel="ArrowImage">
+                    <rect key="frame" x="172" y="5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="MKK-KL-rZX"/>
+                        <constraint firstAttribute="width" secondItem="gO9-ue-0cY" secondAttribute="height" multiplier="1:1" id="Mhv-oo-WCx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Holder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXD-9K-ThS">
+                    <rect key="frame" x="8" y="4" width="156" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="3vW-5z-O2a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1n-Ex-CbS" userLabel="ComboBox Value Label">
+                    <rect key="frame" x="8" y="5" width="156" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CIt-QV-UFP"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="lkV-aa-wJF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gO9-ue-0cY" firstAttribute="leading" secondItem="xXD-9K-ThS" secondAttribute="trailing" constant="8" id="7jc-3f-KwT"/>
+                <constraint firstItem="t1n-Ex-CbS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DzF-lU-znj"/>
+                <constraint firstItem="xXD-9K-ThS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="IQ3-oX-DDg"/>
+                <constraint firstItem="gO9-ue-0cY" firstAttribute="leading" secondItem="t1n-Ex-CbS" secondAttribute="trailing" constant="8" id="U24-hY-QpU"/>
+                <constraint firstItem="gO9-ue-0cY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="s6A-fa-jU0"/>
+                <constraint firstItem="xXD-9K-ThS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xsB-AK-KF6"/>
+                <constraint firstItem="t1n-Ex-CbS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="yCk-co-ove"/>
+                <constraint firstAttribute="trailing" secondItem="gO9-ue-0cY" secondAttribute="trailing" constant="8" id="yho-GJ-aoo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_arrowImageView" destination="gO9-ue-0cY" id="MMk-bs-e2R"/>
+                <outlet property="_placeHolderLabel" destination="xXD-9K-ThS" id="Rks-J6-TlM"/>
+                <outlet property="_titleLabel" destination="t1n-Ex-CbS" id="gCN-sD-ZkM"/>
+            </connections>
+            <point key="canvasLocation" x="251" y="112"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_cbb_arrow" width="128" height="128"/>
+    </resources>
+</document>
